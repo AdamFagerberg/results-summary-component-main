@@ -1,0 +1,247 @@
+@import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap");
+
+/* Hanken Grotesk, 500, 700, 800 */
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+:root {
+  --light-red: hsl(0, 100%, 67%);
+  --orangey-yellow: hsl(39, 100%, 56%);
+  --green-teal: hsl(166, 100%, 37%);
+  --cobalt-blue: hsl(234, 85%, 45%);
+  --white: hsl(0, 0%, 100%);
+  --pale-blue: hsl(221, 100%, 96%);
+  --light-lavender: hsl(241, 100%, 89%);
+  --dark-gray-blue: hsl(224, 30%, 27%);
+  --light-red-lowop: hsla(0, 100%, 67%, 0.1);
+  --orangey-yellow-lowop: hsla(39, 100%, 56%, 0.1);
+  --green-teal-lowop: hsla(166, 100%, 37%, 0.1);
+  --light-lavender-lowop: hsla(241, 100%, 89%, 0.2);
+
+  /*Gradients*/
+
+  --light-slate-blue: hsl(252, 100%, 67%); /*background*/
+  --light-royal-blue: hsl(241, 81%, 54%); /*background*/
+
+  --violet-blue: hsla(256, 72%, 46%, 1); /*circle*/
+  --persian-blue: hsla(241, 72%, 46%, 0); /*circle*/
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Hanken Grotesk", sans-serif;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(2, 1fr);
+}
+
+.resultcontainer {
+  background-image: linear-gradient(
+    var(--light-slate-blue),
+    var(--light-royal-blue)
+  );
+  border-radius: 0 0 2rem 2rem;
+  grid-column: 1;
+  grid-row: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.circle {
+  border-radius: 50%;
+  height: 130px;
+  width: 130px;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: rgba(255, 255, 255, 0.2);
+  background-image: linear-gradient(var(--violet-blue), var(--persian-blue));
+}
+
+.circlescore {
+  color: var(--white);
+  font-size: 3.5rem;
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.5);
+  font-weight: 500;
+}
+
+h2 {
+  padding: 20px;
+  font-weight: 500;
+}
+
+.resulttext > p {
+  color: rgba(255, 255, 255, 0.5);
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.resulttext {
+  color: var(--white);
+}
+
+.summarycontainer {
+  background-color: var(--white);
+  grid-column: 1;
+  grid-row: 2;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+}
+
+h3 {
+  grid-column: 1;
+  grid-row: 2;
+  padding: 1rem;
+}
+
+.reaction,
+.memory,
+.verbal,
+.visual {
+  padding: 1rem;
+  margin: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 0.5rem;
+}
+
+.icons {
+  margin-right: 0.5rem;
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.reaction {
+  grid-column: 1 / 4;
+  grid-row: 3;
+  background-color: var(--light-red-lowop);
+  margin-top: 0;
+}
+
+.memory {
+  grid-column: 1 / 4;
+  grid-row: 4;
+  background-color: var(--orangey-yellow-lowop);
+}
+
+.verbal {
+  grid-column: 1 / 4;
+  grid-row: 5;
+  background-color: var(--green-teal-lowop);
+}
+
+.visual {
+  grid-column: 1 / 4;
+  grid-row: 6;
+  background-color: var(--light-lavender-lowop);
+}
+
+.reactiontext,
+.memorytext,
+.verbaltext,
+.visualtext {
+  font-weight: 700;
+}
+
+.reactiontext {
+  color: var(--light-red);
+}
+
+.memorytext {
+  color: var(--orangey-yellow);
+}
+
+.verbaltext {
+  color: var(--green-teal);
+}
+
+.visualtext {
+  color: var(--light-slate-blue);
+}
+
+.scorewrapper {
+  margin-left: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.score {
+  font-weight: 800;
+}
+
+.totalscore {
+  font-weight: 800;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.button {
+  grid-column: 1 / 4;
+  grid-row: 7;
+  padding: 1.1rem;
+  background-color: var(--dark-gray-blue);
+  border-radius: 2rem;
+  color: var(--white);
+  margin: 20px;
+  border-style: none;
+  font-size: 1rem;
+  font-weight: bold;
+  font-family: "Hanken Grotesk";
+  cursor: pointer;
+}
+
+.button:hover {
+  background-image: linear-gradient(
+    var(--light-slate-blue),
+    var(--light-royal-blue)
+  );
+}
+
+@media (min-width: 600px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    margin-top: 100px;
+    margin-bottom: 50px;
+  }
+
+  .resultcontainer {
+    grid-column: 1;
+    grid-row-gap: 1;
+    border-radius: 2rem;
+  }
+
+  .summarycontainer {
+    grid-column: 2;
+    grid-row: 1;
+  }
+}
